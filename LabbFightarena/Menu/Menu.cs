@@ -7,9 +7,10 @@ namespace LabbFightarena.Menu
     class Menu
     {
         public int ActiveApplicationMenu { get; set; }
-        public int ActiveMenu { get; set; }
+        public int ActiveApplicationSubMenu { get; set; }
+        public int MenuButton { get; set; }
 
-        public enum ApplicationMenu
+        public enum ApplicationMenus
         {
             MainMenu,
             HeroMenu,
@@ -25,7 +26,31 @@ namespace LabbFightarena.Menu
 
         public enum HeroMenu
         {
+            NewHero,
+            LoadHero,
+            Exit
+        }
 
+        public enum NewHero
+        {
+            HeroName,
+            Health,
+            MaxHealth,
+            Strength
+        }
+
+        public enum LoadHero
+        {
+            HeroItem,
+            Exit
+        }
+
+        public enum CustomizeHero
+        {
+            HeroName,
+            Health,
+            MaxHealth,
+            Strength,
         }
     }
 }
