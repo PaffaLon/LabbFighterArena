@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <Folder Include="Characters\NPC\Monsters\" />
-    <Folder Include="Characters\Player\" />
   </ItemGroup>
 
 </Project>
