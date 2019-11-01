@@ -9,6 +9,8 @@ namespace LabbFightarena.Menu
         public int ActiveApplicationMenu { get; set; }
         public int ActiveApplicationSubMenu { get; set; }
         public int MenuButton { get; set; }
+        
+        public string[] menuContent;
 
         public enum ApplicationMenus
         {
@@ -20,6 +22,7 @@ namespace LabbFightarena.Menu
         public enum MainMenu
         {
             Play,
+            ScoreBoard,
             CombatLog,
             Exit
         }

@@ -1,12 +1,15 @@
 ﻿using System;
+using LabbFightarena.Menu;
 
 namespace LabbFightarena
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            MenuManager menuManager = new MenuManager();
+            menuManager.DefaultValues();
+            menuManager.LoadMenu();
         }
     }
 }
