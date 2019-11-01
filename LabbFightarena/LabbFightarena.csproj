@@ -8,7 +8,6 @@
   <ItemGroup>
     <Folder Include="Characters\NPC\Monsters\" />
     <Folder Include="Characters\Player\" />
-    <Folder Include="Menu\" />
   </ItemGroup>
 
 </Project>
