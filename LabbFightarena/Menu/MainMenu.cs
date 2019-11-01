@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LabbFightarena.Menu
 {
-    class MainMenu
+    public class MainMenu
     {
         
     }
