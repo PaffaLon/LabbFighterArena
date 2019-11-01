@@ -10,5 +10,18 @@ namespace LabbFightarena.Characters.NPC.Monsters
         public int MaxHealth { get; set; }
         public int Health { get; set; }
         public int Strength { get; set; }
+
+        public void Bandit()
+        {
+            Name = "Bandit";
+            MaxHealth = 100;
+            Health = MaxHealth;
+            //Strength = DiceRoll
+        }
+
+        public void Gladiator()
+        {
+
+        }
     }
 }
