@@ -6,11 +6,18 @@ namespace LabbFightarena.Menu
 {
     public class HeroMenu
     {
+        public enum Buttons
+        {
+            NewHero,
+            LoadHero,
+            Exit
+        }
+
         public void Content(int menuButton, out string[] getMenuItems)
         {
-            string[] unselectedMenuItems = new string[3];
-            string[] seletedMenuItems = new string[3];
             string[] _getMenuItems = new string[3];
+            string[] seletedMenuItems = new string[3];
+            string[] unselectedMenuItems = new string[3];
 
             seletedMenuItems[0] = (">> New Hero <<");
             seletedMenuItems[1] = (">> Load Hero <<");
@@ -19,8 +26,6 @@ namespace LabbFightarena.Menu
             seletedMenuItems[0] = ("New Hero");
             seletedMenuItems[1] = ("Load Hero");
             seletedMenuItems[2] = ("Exit");
-
-            getMenuItems = _getMenuItems;
 
             if(menuButton == 0)
             {
@@ -40,6 +45,7 @@ namespace LabbFightarena.Menu
                 _getMenuItems[1] = unselectedMenuItems[1];
                 _getMenuItems[2] = seletedMenuItems[2];
             }
+            getMenuItems = _getMenuItems;
         }
     }
 }
