@@ -13,7 +13,7 @@ namespace LabbFightarena.Menu
         public void DefaultValues()
         {
             menu.ActiveApplicationMenu = (int)Menu.ApplicationMenus.MainMenu;
-            menu.MenuButton = (int)Menu.MainMenu.Play;
+            menu.MenuButton = (int)MainMenu.Buttons.Play;
         }
 
         public void LoadMenu()
@@ -26,16 +26,16 @@ namespace LabbFightarena.Menu
 
                 if (menu.ActiveApplicationMenu == (int)Menu.ApplicationMenus.MainMenu)
                 {
-                    if (menu.MenuButton == (int)Menu.MainMenu.Play)
+                    if (menu.MenuButton == (int)MainMenu.Buttons.Play)
                         mainMenu.Content(menu.MenuButton, out menu.menuContent);
          
-                    else if (menu.MenuButton == (int)Menu.MainMenu.ScoreBoard)
+                    else if (menu.MenuButton == (int)MainMenu.Buttons.ScoreBoard)
                         mainMenu.Content(menu.MenuButton, out menu.menuContent);
            
-                    else if (menu.MenuButton == (int)Menu.MainMenu.CombatLog)
+                    else if (menu.MenuButton == (int)MainMenu.Buttons.CombatLog)
                         mainMenu.Content(menu.MenuButton, out menu.menuContent);
                
-                    else if (menu.MenuButton == (int)Menu.MainMenu.Exit)
+                    else if (menu.MenuButton == (int)MainMenu.Buttons.Exit)
                         mainMenu.Content(menu.MenuButton, out menu.menuContent);
 
                 }
@@ -124,7 +124,7 @@ namespace LabbFightarena.Menu
                     else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)HeroMenu.Buttons.Exit)
                     {
                         menu.ActiveApplicationMenu = (int)Menu.ApplicationMenus.MainMenu;
-                        menu.MenuButton = (int)Menu.MainMenu.Play;
+                        menu.MenuButton = (int)MainMenu.Buttons.Play;
 
                     }break;
                 default:
@@ -140,25 +140,25 @@ namespace LabbFightarena.Menu
                         if (menu.MenuButton > 4)
                             menu.MenuButton = 4;
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)Menu.MainMenu.Play)
+                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)MainMenu.Buttons.Play)
                     {
                         menu.ActiveApplicationMenu = (int)Menu.ApplicationMenus.HeroMenu;
                         menu.MenuButton = (int)HeroMenu.Buttons.NewHero;
                         
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)Menu.MainMenu.ScoreBoard)
+                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)MainMenu.Buttons.ScoreBoard)
                     {
                         Console.Clear();
                         Console.WriteLine("The Scoreboard has not jet been implemented.");
                         Thread.Sleep(1000);
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)Menu.MainMenu.CombatLog)
+                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)MainMenu.Buttons.CombatLog)
                     {
                         Console.Clear();
                         Console.WriteLine("The View last combat log has not jet been implemnted.");
                         Thread.Sleep(1000);
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)Menu.MainMenu.Exit)
+                    else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)MainMenu.Buttons.Exit)
                     {
                         Environment.Exit(0);
                     }
