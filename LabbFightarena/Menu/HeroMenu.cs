@@ -12,10 +12,10 @@ namespace LabbFightarena.Menu
             LoadHero,
             Exit
         }
+        public string[] getMenuItems = new string[3];
 
-        public void Content(int menuButton, out string[] getMenuItems)
+        public void Content(int menuButton)
         {
-            string[] _getMenuItems = new string[3];
             string[] seletedMenuItems = new string[3];
             string[] unselectedMenuItems = new string[3];
 
@@ -23,29 +23,28 @@ namespace LabbFightarena.Menu
             seletedMenuItems[1] = (">> Load Hero <<");
             seletedMenuItems[2] = (">> Exit <<");
 
-            seletedMenuItems[0] = ("New Hero");
-            seletedMenuItems[1] = ("Load Hero");
-            seletedMenuItems[2] = ("Exit");
+            unselectedMenuItems[0] = ("New Hero");
+            unselectedMenuItems[1] = ("Load Hero");
+            unselectedMenuItems[2] = ("Exit");
 
             if(menuButton == 0)
             {
-                _getMenuItems[0] = seletedMenuItems[0];
-                _getMenuItems[1] = unselectedMenuItems[1];
-                _getMenuItems[2] = unselectedMenuItems[2];
+                getMenuItems[0] = seletedMenuItems[0];
+                getMenuItems[1] = unselectedMenuItems[1];
+                getMenuItems[2] = unselectedMenuItems[2];
             }
             else if(menuButton == 1)
             {
-                _getMenuItems[0] = unselectedMenuItems[0];
-                _getMenuItems[1] = seletedMenuItems[1];
-                _getMenuItems[2] = unselectedMenuItems[2];
+                getMenuItems[0] = unselectedMenuItems[0];
+                getMenuItems[1] = seletedMenuItems[1];
+                getMenuItems[2] = unselectedMenuItems[2];
             }
             else if(menuButton == 2)
             {
-                _getMenuItems[0] = unselectedMenuItems[0];
-                _getMenuItems[1] = unselectedMenuItems[1];
-                _getMenuItems[2] = seletedMenuItems[2];
+                getMenuItems[0] = unselectedMenuItems[0];
+                getMenuItems[1] = unselectedMenuItems[1];
+                getMenuItems[2] = seletedMenuItems[2];
             }
-            getMenuItems = _getMenuItems;
         }
     }
 }

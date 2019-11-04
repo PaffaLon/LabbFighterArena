@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,8 +9,9 @@ namespace LabbFightarena.Menu
     {
         public int ActiveApplicationMenu { get; set; }
         public int MenuButton { get; set; }
-        
-        public string[] menuContent;
+
+        public List<string> menuElements = new List<string>();
+
 
         public enum ApplicationMenus
         {
