@@ -6,6 +6,14 @@ namespace LabbFightarena.Menu
 {
     public class MainMenu
     {
+        public enum Buttons
+        {
+            Play,
+            ScoreBoard,
+            CombatLog,
+            Exit
+        }
+
         public void Content(int menuButton, out string[] getMenuItems)
         {
             string[] _getMenuItems = new string[4];

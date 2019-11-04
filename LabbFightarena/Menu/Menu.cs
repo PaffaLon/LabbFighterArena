@@ -18,14 +18,6 @@ namespace LabbFightarena.Menu
             CombatLog
         }
 
-        public enum MainMenu
-        {
-            Play,
-            ScoreBoard,
-            CombatLog,
-            Exit
-        }
-
         public enum NewHero
         {
             HeroName,
