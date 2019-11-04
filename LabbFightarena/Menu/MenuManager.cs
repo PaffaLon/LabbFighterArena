@@ -132,7 +132,7 @@ namespace LabbFightarena.Menu
                     {
                         Console.Clear();
                         Console.WriteLine("The feature: Load hero, has not been implemented.");
-                        Thread.Sleep(1000);
+                        Thread.Sleep(2500);
                     }
                     else if (cki.Key.GetHashCode() == 13 && menu.MenuButton == (int)HeroMenu.Buttons.Exit)
                     {
