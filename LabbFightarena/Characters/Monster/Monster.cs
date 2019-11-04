@@ -6,5 +6,6 @@ namespace LabbFightarena.Characters.Monster
 {
     class Monster : Character
     {
+        public int ID { get; set; }
     }
 }
