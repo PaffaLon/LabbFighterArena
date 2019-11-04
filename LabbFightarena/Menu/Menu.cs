@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LabbFightarena.Menu
 {
-    class Menu
+    public class Menu
     {
         public int ActiveApplicationMenu { get; set; }
         public int MenuButton { get; set; }
