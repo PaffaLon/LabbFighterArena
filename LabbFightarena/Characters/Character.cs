@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabbFightarena.Characters.Player
+namespace LabbFightarena.Characters
 {
-    public class Player
+    public class Character
     {
-  
-
 
     }
 }
