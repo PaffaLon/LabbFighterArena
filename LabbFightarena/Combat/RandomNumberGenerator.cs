@@ -15,11 +15,11 @@ namespace LabbFightarena.Combat
 
         public void PlayerStrength()
         {
-            Player.Strength = rng.Next(1, 6);
+            //Player.Strength = rng.Next(1, 6);
         }
         public void MonsterStrength()
         {
-            monster.Strength = rng.Next(1, 6);
+            //monster.Strength = rng.Next(1, 6);
         }
     }
 }

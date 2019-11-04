@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LabbFightarena.Characters.Player;
+using LabbFightarena.Characters.Monster;
 
 namespace LabbFightarena.Characters
 {
