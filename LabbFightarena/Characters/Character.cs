@@ -12,5 +12,11 @@ namespace LabbFightarena.Characters
         public int MaxHealth { get; set; }
         public int MinHealth { get; }
         public int Strength { get; set; }
+
+        private enum CharacterType
+        {
+            Player,
+            Monster
+        }
     }
 }

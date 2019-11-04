@@ -10,12 +10,15 @@ namespace LabbFightarena.Menu
         readonly Menu menu = new Menu();
         readonly MainMenu mainMenu = new MainMenu();
         readonly HeroMenu heroMenu = new HeroMenu();
+
+        //Ensuers the defalut value is set to the intended value.
         public void DefaultValues()
         {
             menu.ActiveApplicationMenu = (int)Menu.ApplicationMenus.MainMenu;
             menu.MenuButton = (int)MainMenu.Buttons.Play;
         }
 
+        //Loads the active menu for the user.
         public void LoadMenu()
         {
             if (Console.CursorVisible == true)
@@ -80,6 +83,7 @@ namespace LabbFightarena.Menu
             MenuNaviagtion();
         }
 
+        //Prints the active menu for the user.
         private void PrintMenuContent()
         {
             Console.Clear();
@@ -99,6 +103,8 @@ namespace LabbFightarena.Menu
             }
         }
 
+        //Makes it possible to navigate in the menu for the user.
+        //Sets the values for loading a sub menu of user choise in the current active menu.
         private void MenuNaviagtion()
         {
             ConsoleKeyInfo cki;
@@ -180,6 +186,8 @@ namespace LabbFightarena.Menu
             }        
             LoadMenu();
         }
+
+        //Prints menu text in the center of the screen.
         private void CenterText()
         {
             foreach (var item in menu.menuElements)

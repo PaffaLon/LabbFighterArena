@@ -6,6 +6,6 @@ namespace LabbFightarena.Characters.Player
 {
     public class Player
     {
-  
+        public int ID { get; set; }
     }
 }
