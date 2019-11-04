@@ -8,6 +8,10 @@ namespace LabbFightarena.Characters
 {
     public class Character
     {
+        //Private Enumes
+        private enum CharacterType { Player, Monster }
+
+        //Public Properies
         public object TypeOfCharacter { get; set; }
         public string Name { get; set; }
         public int Health { get; set; }
@@ -15,10 +19,8 @@ namespace LabbFightarena.Characters
         public int MinHealth { get; }
         public int Strength { get; set; }
 
-        private enum CharacterType
-        {
-            Player,
-            Monster
-        }
+        //Private Properies
+        private int ID { get; set; }
+
     }
 }
