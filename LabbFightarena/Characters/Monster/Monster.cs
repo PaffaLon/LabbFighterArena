@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LabbFightarena.Characters.Monster
 {
-    class Monster
+    class Monster : Character
     {
     }
 }
