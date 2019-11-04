@@ -3,7 +3,7 @@ using LabbFightarena.Menu;
 
 namespace LabbFightarena
 {
-    class Program
+    public class Program
     {
         static void Main()
         {
