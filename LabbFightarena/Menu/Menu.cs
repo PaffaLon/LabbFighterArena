@@ -12,20 +12,11 @@ namespace LabbFightarena.Menu
 
         public List<string> menuElements = new List<string>();
 
-
         public enum ApplicationMenus
         {
             MainMenu,
             HeroMenu,
             CombatLog
-        }
-
-        public enum NewHero
-        {
-            HeroName,
-            Health,
-            MaxHealth,
-            Strength
         }
 
         public enum LoadHero

@@ -21,7 +21,7 @@ namespace LabbFightarena.Menu
             if (Console.CursorVisible == true)
                 Console.CursorVisible = false;
             
-
+            if(menu.menuElements != null)
                 menu.menuElements.Clear();
 
             if (menu.ActiveApplicationMenu == (int)Menu.ApplicationMenus.MainMenu)
@@ -114,7 +114,7 @@ namespace LabbFightarena.Menu
                     {
                         menu.MenuButton -= 1;
                         if (menu.MenuButton < 0)
-                            menu.MenuButton = 1;
+                            menu.MenuButton = 0;
                     }
                     else if (cki.Key.GetHashCode() == 40)
                     {
@@ -145,7 +145,7 @@ namespace LabbFightarena.Menu
                     {
                         menu.MenuButton -= 1;
                             if(menu.MenuButton < 0)
-                                menu.MenuButton = 1;
+                                menu.MenuButton = 0;
                     }
                     else if (cki.Key.GetHashCode() == 40)
                     {
