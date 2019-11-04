@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LabbFightarena.Characters.Monster
+namespace LabbFightarena.Characters.Monsters
 {
     class Monster : Character
     {

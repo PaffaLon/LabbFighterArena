@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using LabbFightarena.Characters.Player;
-using LabbFightarena.Characters.Monster;
+using LabbFightarena.Characters.Monsters;
 
 namespace LabbFightarena.Combat
 {
