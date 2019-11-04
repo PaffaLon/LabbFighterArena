@@ -7,7 +7,5 @@ namespace LabbFightarena.Characters.Player
     public class Player
     {
   
-
-
     }
 }

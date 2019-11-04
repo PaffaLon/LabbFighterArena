@@ -6,6 +6,10 @@ namespace LabbFightarena.Characters
 {
     public class Character
     {
-
+        public string Name { get; set; }
+        public int MaxHealth { get; set; }
+        public int MinHealth { get; set; }
+        public int Health { get; set; }
+        public int Strength { get; set; }
     }
 }
