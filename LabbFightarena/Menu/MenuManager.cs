@@ -7,7 +7,6 @@ namespace LabbFightarena.Menu
 {
     class MenuManager
     {
-        readonly Menu menu = new Menu();
         readonly MainMenu mainMenu = new MainMenu();
         readonly HeroMenu heroMenu = new HeroMenu();
 
@@ -23,8 +22,8 @@ namespace LabbFightarena.Menu
         //Ensuers the defalut value is set to the intended value.
         public void DefaultValues()
         {
-            ActiveApplicationMenu = (int)Menu.ApplicationMenus.MainMenu;
-            mainMenu. = (int)MainMenu.Buttons.Play;
+            ActiveApplicationMenu = (int)ApplicationMenus.MainMenu;
+            mainMenu.Button = (int)MainMenu.Buttons.Play;
         }
 
         //Loads the active menu for the user.
@@ -33,58 +32,24 @@ namespace LabbFightarena.Menu
             if (Console.CursorVisible == true)
                 Console.CursorVisible = false;
             
-            if(menu.Elements != null)
-                menu.Elements.Clear();
+            if(mainMenu.Elements != null)
+                mainMenu.Elements.Clear();
 
-            if (menu.ActiveApplicationMenu == (int)Menu.ApplicationMenus.MainMenu)
+            if (ActiveApplicationMenu == (int)ApplicationMenus.MainMenu)
             {
-                if (menu.Button == (int)MainMenu.Buttons.Play)
-                {
-                    mainMenu.Content(menu.Button);
+                    mainMenu.Content(mainMenu.Button);
                     foreach (var item in mainMenu.getMenuItems)
-                        menu.Elements.Add(item);
-                }
-                else if (menu.Button == (int)MainMenu.Buttons.ScoreBoard)
-                {
-                    mainMenu.Content(menu.Button);
-                    foreach (var item in mainMenu.getMenuItems)
-                        menu.Elements.Add(item);
-                }
-                else if (menu.Button == (int)MainMenu.Buttons.CombatLog)
-                {
-                    mainMenu.Content(menu.Button);
-                    foreach (var item in mainMenu.getMenuItems)
-                        menu.Elements.Add(item);
-                }
-                else if (menu.Button == (int)MainMenu.Buttons.Exit)
-                {
-                    mainMenu.Content(menu.Button);
-                    foreach (var item in mainMenu.getMenuItems)
-                        menu.Elements.Add(item);
-                }
+                       mainMenu.Elements.Add(item);   
+
             }
-            else if (menu.ActiveApplicationMenu == (int)Menu.ApplicationMenus.HeroMenu)
+            else if (ActiveApplicationMenu == (int)ApplicationMenus.HeroMenu)
             {
-                if (menu.Button == (int)HeroMenu.Buttons.NewHero)
-                {
-                    heroMenu.Content(menu.Button);
+                    heroMenu.Content(heroMenu.Button);
                     foreach (var item in heroMenu.getMenuItems)
-                        menu.Elements.Add(item);
-                }
-                else if (menu.Button == (int)HeroMenu.Buttons.LoadHero)
-                {
-                    heroMenu.Content(menu.Button);
-                    foreach (var item in heroMenu.getMenuItems)
-                        menu.Elements.Add(item);
-                }
-                else if (menu.Button == (int)HeroMenu.Buttons.Exit)
-                {
-                    heroMenu.Content(menu.Button);
-                    foreach (var item in heroMenu.getMenuItems)
-                        menu.Elements.Add(item);
-                }
+                        heroMenu.Elements.Add(item);
+
             }
-            else if (menu.ActiveApplicationMenu == (int)Menu.ApplicationMenus.CombatLog)
+            else if (ActiveApplicationMenu == (int)ApplicationMenus.CombatLog)
             {
 
             }
@@ -96,12 +61,12 @@ namespace LabbFightarena.Menu
         private void PrintMenuContent()
         {
             Console.Clear();
-            switch (menu.ActiveApplicationMenu)
+            switch (ActiveApplicationMenu)
             {
-                case (int)Menu.ApplicationMenus.HeroMenu:
+                case (int)ApplicationMenus.HeroMenu:
                     CenterText();
                     break;
-                case (int)Menu.ApplicationMenus.CombatLog:
+                case (int)ApplicationMenus.CombatLog:
                         //TO DO
                         // Print the combat log of the last player battle.
                         // A menu option to return to the main menu.
@@ -119,75 +84,75 @@ namespace LabbFightarena.Menu
             ConsoleKeyInfo cki;
             cki = Console.ReadKey();
 
-            switch (menu.ActiveApplicationMenu)
+            switch (ActiveApplicationMenu)
             {
-                case (int)Menu.ApplicationMenus.CombatLog:
+                case (int)ApplicationMenus.CombatLog:
                     break;
 
-                case (int)Menu.ApplicationMenus.HeroMenu:
+                case (int)ApplicationMenus.HeroMenu:
                     if (cki.Key.GetHashCode() == 38)
                     {
-                        menu.Button -= 1;
-                        if (menu.Button < 0)
-                            menu.Button = 0;
+                        heroMenu.Button -= 1;
+                        if (heroMenu.Button < 0)
+                            heroMenu.Button = 0;
                     }
                     else if (cki.Key.GetHashCode() == 40)
                     {
-                        menu.Button += 1;
-                        if (menu.Button > 2)
-                            menu.Button = 2;
+                        heroMenu.Button += 1;
+                        if (heroMenu.Button > 2)
+                            heroMenu.Button = 2;
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.Button == (int)HeroMenu.Buttons.NewHero)
+                    else if (cki.Key.GetHashCode() == 13 && heroMenu.Button == (int)HeroMenu.Buttons.NewHero)
                     {
                         Console.Clear();
                         Console.WriteLine("You can soon generate a new hero.");
                         Thread.Sleep(1000);
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.Button == (int)HeroMenu.Buttons.LoadHero)
+                    else if (cki.Key.GetHashCode() == 13 && heroMenu.Button == (int)HeroMenu.Buttons.LoadHero)
                     {
                         Console.Clear();
                         Console.WriteLine("The feature: Load hero, has not been implemented.");
                         Thread.Sleep(2500);
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.Button == (int)HeroMenu.Buttons.Exit)
+                    else if (cki.Key.GetHashCode() == 13 && heroMenu.Button == (int)HeroMenu.Buttons.Exit)
                     {
-                        menu.ActiveApplicationMenu = (int)Menu.ApplicationMenus.MainMenu;
-                        menu.Button = (int)MainMenu.Buttons.Play;
+                        ActiveApplicationMenu = (int)ApplicationMenus.MainMenu;
+                        mainMenu.Button = (int)MainMenu.Buttons.Play;
 
                     }break;
                 default:
                     if (cki.Key.GetHashCode() == 38)
                     {
-                        menu.Button -= 1;
-                            if(menu.Button < 0)
-                                menu.Button = 0;
+                        mainMenu.Button -= 1;
+                            if(mainMenu.Button < 0)
+                                mainMenu.Button = 0;
                     }
                     else if (cki.Key.GetHashCode() == 40)
                     {
-                        menu.Button += 1;
-                        if (menu.Button > 3)
-                            menu.Button = 3;
+                        mainMenu.Button += 1;
+                        if (mainMenu.Button > 3)
+                            mainMenu.Button = 3;
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.Button == (int)MainMenu.Buttons.Play)
+                    else if (cki.Key.GetHashCode() == 13 && mainMenu.Button == (int)MainMenu.Buttons.Play)
                     {
-                        menu.ActiveApplicationMenu = (int)Menu.ApplicationMenus.HeroMenu;
-                        menu.Button = (int)HeroMenu.Buttons.NewHero;
+                        ActiveApplicationMenu = (int)ApplicationMenus.HeroMenu;
+                        mainMenu.Button = (int)HeroMenu.Buttons.NewHero;
                         LoadMenu();
                         
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.Button == (int)MainMenu.Buttons.ScoreBoard)
+                    else if (cki.Key.GetHashCode() == 13 && mainMenu.Button == (int)MainMenu.Buttons.ScoreBoard)
                     {
                         Console.Clear();
                         Console.WriteLine("The Scoreboard has not jet been implemented.");
                         Thread.Sleep(1000);
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.Button == (int)MainMenu.Buttons.CombatLog)
+                    else if (cki.Key.GetHashCode() == 13 && mainMenu.Button == (int)MainMenu.Buttons.CombatLog)
                     {
                         Console.Clear();
                         Console.WriteLine("The View last combat log has not jet been implemnted.");
                         Thread.Sleep(1000);
                     }
-                    else if (cki.Key.GetHashCode() == 13 && menu.Button == (int)MainMenu.Buttons.Exit)
+                    else if (cki.Key.GetHashCode() == 13 && mainMenu.Button == (int)MainMenu.Buttons.Exit)
                     {
                         Environment.Exit(0);
                     }
@@ -199,10 +164,22 @@ namespace LabbFightarena.Menu
         //Prints menu text in the center of the screen.
         private void CenterText()
         {
-            foreach (var item in menu.Elements)
+            switch (ActiveApplicationMenu)
             {
-                Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.CursorTop);
-                Console.WriteLine(item + Environment.NewLine);
+                case (int)ApplicationMenus.HeroMenu:
+                    break;
+                    foreach (var item in heroMenu.Elements)
+                    {
+                        Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.CursorTop);
+                        Console.WriteLine(item + Environment.NewLine);
+                    }
+                default:
+                    foreach (var item in mainMenu.Elements)
+                    {
+                        Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.CursorTop);
+                        Console.WriteLine(item + Environment.NewLine);
+                    }
+                    break;
             }
         }
     }

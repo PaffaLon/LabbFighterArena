@@ -11,7 +11,7 @@ namespace LabbFightarena.Menu
         public List<string> Elements { get; set; }
         public int Button { get; set; }
 
-        Menu()
+        public Menu()
         {
             Elements = new List<string>();
         }
