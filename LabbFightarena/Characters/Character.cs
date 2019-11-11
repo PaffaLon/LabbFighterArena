@@ -9,7 +9,7 @@ namespace LabbFightarena.Characters
     public class Character
     {
         //Private Enumes
-        private enum CharacterType { Player, Monster }
+        public enum CharacterType { Player, Monster }
 
         //Public Properies
         public object TypeOfCharacter { get; set; }
