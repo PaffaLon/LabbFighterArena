@@ -36,7 +36,6 @@ namespace LabbFightarena.Menu
                     mainMenu.Content(mainMenu.Button);
                     foreach (var item in mainMenu.getMenuItems)
                        mainMenu.Elements.Add(item);   
-
             }
             else if (ActiveApplicationMenu == (int)ApplicationMenus.HeroMenu)
             {
