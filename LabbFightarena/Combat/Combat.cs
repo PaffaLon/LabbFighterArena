@@ -26,6 +26,11 @@ namespace LabbFightarena.Combat
         {
 
         }
+
+        private void PrintCombat()
+        {
+
+        }
     }
 }
 
