@@ -8,9 +8,9 @@ namespace LabbFightarena.Characters.Player
     {
         public int ID { get; set; }
 
-        private void GetHealth()
+        Player()
         {
-
+            
         }
     }
 }

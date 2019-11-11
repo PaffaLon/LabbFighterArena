@@ -13,11 +13,12 @@ namespace LabbFightarena.Characters
 
         //Public Properies
         public object TypeOfCharacter { get; set; }
-        public string Name { get; set; }
-        public int Health { get; set; }
-        public int MaxHealth { get; set; }
-        public int MinHealth { get; }
-        public int Strength { get; set; }
+        public string Name      { get; set; }
+        public int Health       { get; set; }
+        public int MaxHealth    { get; set; }
+        public int MinHealth    { get; private set;}
+        public int Strength     { get; set; }
+        public bool IsInCombat  { get; set; }
 
         //Private Properies
         private int ID { get; set; }
