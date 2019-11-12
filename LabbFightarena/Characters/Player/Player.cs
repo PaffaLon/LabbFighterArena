@@ -17,6 +17,11 @@ namespace LabbFightarena.Characters.Player
             MaxHealth = _maxHealth;
         }
 
+        public Player(int health, int damage, bool isInCombat)
+        {
+
+        }
+
         private int DamagePlayer(int attackDamage, int health)
         {
             this.Health = health - attackDamage;
