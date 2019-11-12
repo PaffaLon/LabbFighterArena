@@ -8,7 +8,6 @@ namespace LabbFightarena
         static void Main()
         {
             MenuManager menuManager = new MenuManager();
-            menuManager.DefaultValues();
             menuManager.LoadMenu();
         }
     }
