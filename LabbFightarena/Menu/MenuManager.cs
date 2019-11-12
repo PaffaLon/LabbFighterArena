@@ -159,6 +159,7 @@ namespace LabbFightarena.Menu
         //Prints menu text in the center of the screen.
         private void CenterText()
         {
+            int col = Console.WindowHeight / Console.WindowHeight + 1;
             switch (ActiveApplicationMenu)
             {
                 case (int)ApplicationMenus.HeroMenu:
@@ -171,8 +172,8 @@ namespace LabbFightarena.Menu
                 default:
                     foreach (var item in mainMenu.Elements)
                     {
-                        Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.CursorTop);
-                        Console.WriteLine(item + Environment.NewLine);
+                        Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.WindowHeight / 2 - 6 + col++);
+                        Console.Write(item + Environment.NewLine);
                     }
                     break;
             }

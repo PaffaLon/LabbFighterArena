@@ -6,7 +6,7 @@ namespace LabbFightarena.Combat
 {
     public class CombatWindow
     {
-        private void CombatMenu()
+        public void CombatMenu()
         {
             string[] unselectedMenuItems = new string[2];
             unselectedMenuItems[0] = ("Attack");
@@ -18,12 +18,13 @@ namespace LabbFightarena.Combat
 
             string[] combatWindow = new string[2];
             combatWindow[0] = ("|");
-            combatWindow[1] = ("2");
+            combatWindow[1] = ("-");
+
 
 
             /*
             |---------------------------------------------------|
-            |   PlayerName                  |   Monster         |    
+            |   PlayerName                  |   Monster         |
             |   HP:     100                 |   HP:     100     |
             |   Str:    5                   |   str:    5       |
             |   Armor:  5                   |   Armor:  5       |

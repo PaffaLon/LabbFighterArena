@@ -20,10 +20,10 @@ namespace LabbFightarena.Menu
             string[] SelectedMenuItems = new string[4];
             string[] unselectedMenuItems = new string[4];
 
-            SelectedMenuItems[0] = (">> Play <<");
+            SelectedMenuItems[0] = (">>    Play    <<");
             SelectedMenuItems[1] = (">> Scoreboard <<");
             SelectedMenuItems[2] = (">> Combatlog <<");
-            SelectedMenuItems[3] = (">> Exit <<");
+            SelectedMenuItems[3] = (">>    Exit    <<");
 
             unselectedMenuItems[0] = ("Play");
             unselectedMenuItems[1] = ("Scoreboard");

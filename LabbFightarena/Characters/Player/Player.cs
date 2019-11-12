@@ -22,14 +22,14 @@ namespace LabbFightarena.Characters.Player
 
         }
 
-        private int DamagePlayer(int attackDamage, int health)
+        public int DamagePlayer(int attackDamage, int health)
         {
             this.Health = health - attackDamage;
             return Health;
         }
 
         //Compares the characters current health with minimum health requerd to be alive.
-        private bool HealthCheck(int health)
+        public bool HealthCheck(int health)
         {
             if (health <= this.MinHealth)
                 this.IsAlive = false;

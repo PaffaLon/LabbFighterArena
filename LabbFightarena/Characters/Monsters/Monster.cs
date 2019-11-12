@@ -16,13 +16,13 @@ namespace LabbFightarena.Characters.Monsters
             MaxHealth = _maxHealth;
         }
 
-        private int DamageMonster(int attackDamage, int health)
+        public int DamageMonster(int attackDamage, int health)
         {
             this.Health = health - attackDamage;
             return Health;
         }
 
-        private bool HealthCheck(int health)
+        public bool HealthCheck(int health)
         {
             if (health <= this.MinHealth)
                 this.IsAlive = false;
