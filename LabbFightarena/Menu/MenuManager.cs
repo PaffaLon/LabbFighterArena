@@ -168,7 +168,7 @@ namespace LabbFightarena.Menu
                 case (int)ApplicationMenus.HeroMenu:
                     foreach (var item in heroMenu.Elements)
                     {
-                        Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.CursorTop);
+                        Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.WindowHeight / 2 - 6 + col++);
                         Console.WriteLine(item + Environment.NewLine);
                     }
                     break;
