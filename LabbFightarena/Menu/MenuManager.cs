@@ -9,6 +9,7 @@ namespace LabbFightarena.Menu
     {
         readonly MainMenu mainMenu = new MainMenu();
         readonly HeroMenu heroMenu = new HeroMenu();
+        readonly NewHeroMenu newHeroMenu = new NewHeroMenu();
 
         public enum ApplicationMenus
         {
@@ -45,7 +46,7 @@ namespace LabbFightarena.Menu
             }
             else if (ActiveApplicationMenu == (int)ApplicationMenus.CombatLog)
             {
-
+                
             }
             PrintMenuContent();
             MenuNaviagtion();
