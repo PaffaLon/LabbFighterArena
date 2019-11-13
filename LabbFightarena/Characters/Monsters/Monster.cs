@@ -10,12 +10,24 @@ namespace LabbFightarena.Characters.Monsters
         private int _health;
         private int _maxHealth;
 
+        /// <summary>
+        /// Seaths the default health and max health for a new player object.
+        /// </summary>
         public Monster()
         {
             Health = _health;
             MaxHealth = _maxHealth;
         }
 
+        /// <summary>
+        /// This method removs the amount of health points from the monsters health pool,
+        /// equal to the players attack damage.
+        /// </summary>
+        /// <param name="attackDamage"></param>
+        /// <param name="health"></param>
+        /// <returns>
+        /// Returns the current monster health after the damage to the Combat Class.
+        /// </returns>
         public int DamageMonster(int attackDamage, int health)
         {
             this.Health = health - attackDamage;
