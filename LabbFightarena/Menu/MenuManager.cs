@@ -159,7 +159,7 @@ namespace LabbFightarena.Menu
             LoadMenu();
         }
 
-        //Prints menu text in the center of the screen.
+        //Centers the text to print in the center of the console window.
         private void CenterText()
         {
             int col = Console.WindowHeight / Console.WindowHeight + 1;
