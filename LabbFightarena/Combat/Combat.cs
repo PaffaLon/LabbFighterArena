@@ -6,33 +6,52 @@ using LabbFightarena.Characters.Monsters;
 
 namespace LabbFightarena.Combat
 {
+    /// <summary>
+    /// Contains all code for combat between the player and a monst character.
+    /// </summary>
     public class Combat
     {
         object objPpayer = new object();
         Player player = new Player();
         Monster monster = new Monster();
-        
+
+        bool _battlePhase;
 
         
 
         private void Turn()
         {
-            for (player.Health || monster.Health < 0)
+            _battlePhase = true;
+            while (_battlePhase == true)
             {
-
+                DamageMonster();
+                //Update UI
+                DamagePlayer();
+                //Update UI
+                CheckMosterHealth();
+                CheckPlayerHealth();
             }
+        }
 
-            for (int i = 0; i < length; i++)
-            {
+        /// <summary>
+        /// This method check fs the player is alive or not.
+        /// </summary>
+        private void CheckPlayerHealth()
+        {
+            player.HealthCheck(player.Health);
+        }
 
-            }
+        /// <summary>
+        /// This method checks if the monster is alive or not.
+        /// </summary>
+        private void CheckMosterHealth()
+        {
+            monster.HealthCheck(monster.Health);
         }
 
         private void DamagePlayer()
         {
             player.DamagePlayer(monster.Strength, player.Health);
-
-            
         }
 
         private void DamageMonster()

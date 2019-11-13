@@ -28,7 +28,15 @@ namespace LabbFightarena.Characters.Player
             return Health;
         }
 
-        //Compares the characters current health with minimum health requerd to be alive.
+        /// <summary>
+        /// This method compares the players current health with,
+        ///     with the minimum health value allowed.
+        /// If the player health is less then 1, the player is consider not alive.
+        /// </summary>
+        /// <param name="health"></param>
+        /// <returns>
+        /// A booliean value that defines the players "alive/dead" state.
+        /// </returns>
         public bool HealthCheck(int health)
         {
             if (health <= this.MinHealth)
