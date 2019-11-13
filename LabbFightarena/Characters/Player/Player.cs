@@ -22,6 +22,15 @@ namespace LabbFightarena.Characters.Player
 
         }
 
+        /// <summary>
+        /// This method removs the amount of health points from the monsters health pool,
+        /// equal to the players attack damage.
+        /// </summary>
+        /// <param name="attackDamage"></param>
+        /// <param name="health"></param>
+        /// <returns>
+        /// Returns the current monster health after the damage to the Combat Class.
+        /// </returns>
         public int DamagePlayer(int attackDamage, int health)
         {
             this.Health = health - attackDamage;
