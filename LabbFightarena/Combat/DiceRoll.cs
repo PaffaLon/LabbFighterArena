@@ -4,7 +4,8 @@ using System.Text;
 
 namespace LabbFightarena.Combat
 {
-    class DiceRoll
+    public class DiceRoll
     {
+
     }
 }
