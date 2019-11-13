@@ -154,7 +154,7 @@ namespace LabbFightarena.Menu
             }
             if (ActiveApplicationMenu == (int)ApplicationMenus.CombatLog)
             {
-
+                
             }
             LoadMenu();
         }
