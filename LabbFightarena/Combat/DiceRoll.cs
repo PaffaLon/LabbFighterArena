@@ -6,6 +6,10 @@ namespace LabbFightarena.Combat
 {
     public class DiceRoll
     {
+        public void RollTheDice()
+        {
+            var rand = new Random();
 
+        }
     }
 }
