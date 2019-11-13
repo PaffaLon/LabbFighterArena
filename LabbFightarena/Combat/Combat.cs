@@ -59,7 +59,15 @@ namespace LabbFightarena.Combat
             monster.DamageMonster(player.Strength, monster.Health);
         }
 
+        /// <summary>
+        /// Writes the ongoing combat to the console.
+        /// </summary>
         private void PrintCombat()
+        {
+
+        }
+
+        private void SaveLastTurnToCombatLog()
         {
 
         }
