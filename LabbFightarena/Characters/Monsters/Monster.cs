@@ -22,6 +22,15 @@ namespace LabbFightarena.Characters.Monsters
             return Health;
         }
 
+        /// <summary>
+        /// This method compares the monsters current health with,
+        ///     with the minimum health value allowed.
+        /// If the monsters health is less then 1, the player is consider not alive.
+        /// </summary>
+        /// <param name="health"></param>
+        /// <returns>
+        /// A booliean value that defines the monsters "alive/dead" state.
+        /// </returns>
         public bool HealthCheck(int health)
         {
             if (health <= this.MinHealth)
