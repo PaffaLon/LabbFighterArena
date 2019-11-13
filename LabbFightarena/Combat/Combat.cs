@@ -34,7 +34,7 @@ namespace LabbFightarena.Combat
         }
 
         /// <summary>
-        /// This method check fs the player is alive or not.
+        /// This method check if the player is alive or not.
         /// </summary>
         private void CheckPlayerHealth()
         {
@@ -42,7 +42,7 @@ namespace LabbFightarena.Combat
         }
 
         /// <summary>
-        /// This method checks if the monster is alive or not.
+        /// Checks if the monster is alive or not.
         /// </summary>
         private void CheckMosterHealth()
         {
