@@ -71,8 +71,11 @@ namespace LabbFightarena.Menu
             }
         }
 
-        //Makes it possible to navigate in the menu for the user.
-        //Sets the values for loading a sub menu of user choise in the current active menu.
+        /// <summary>
+        /// Makes it possible for the user to navigate in the menu,
+        /// ith pressing the arrow buttons on the keyboard.
+        /// The user can press enter to navigate access another part of the program.
+        /// </summary>
         private void MenuNaviagtion()
         {
             ConsoleKeyInfo cki;
