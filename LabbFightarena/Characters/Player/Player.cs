@@ -23,8 +23,8 @@ namespace LabbFightarena.Characters.Player
         }
 
         /// <summary>
-        /// This method removs the amount of health points from the monsters health pool,
-        /// equal to the players attack damage.
+        /// This method removs the amount of health points from the players health pool,
+        /// equal to the monsters attack damage.
         /// </summary>
         /// <param name="attackDamage"></param>
         /// <param name="health"></param>
