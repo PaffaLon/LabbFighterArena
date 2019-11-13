@@ -15,7 +15,8 @@ namespace LabbFightarena.Menu
         {
             MainMenu,
             HeroMenu,
-            CombatLog
+            CombatLog,
+            NewHeroMenu,
         }
         public int ActiveApplicationMenu { get; set; }
 
@@ -48,6 +49,10 @@ namespace LabbFightarena.Menu
             {
                 
             }
+            else if(ActiveApplicationMenu == (int)ApplicationMenus.NewHeroMenu)
+            {
+                newHeroMenu.Content
+            }
             PrintMenuContent();
             MenuNaviagtion();
         }
@@ -60,6 +65,9 @@ namespace LabbFightarena.Menu
             {
                 case (int)ApplicationMenus.HeroMenu:
                     CenterText();
+                    break;
+                case (int)ApplicationMenus.NewHeroMenu:
+                    
                     break;
                 case (int)ApplicationMenus.CombatLog:
                         //TO DO
@@ -136,6 +144,8 @@ namespace LabbFightarena.Menu
                 }
                 else if (cki.Key.GetHashCode() == 13 && heroMenu.Button == (int)HeroMenu.Buttons.NewHero)
                 {
+                    ActiveApplicationMenu = (int)ApplicationMenus.NewHeroMenu;
+                    newHeroMenu.Button = (int)NewHeroMenu.Buttons.SetName;
                     Console.Clear();
                     Console.WriteLine("You can soon generate a new hero.");
                     Thread.Sleep(1000);

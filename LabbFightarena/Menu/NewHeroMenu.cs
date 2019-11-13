@@ -4,22 +4,26 @@ using System.Text;
 
 namespace LabbFightarena.Menu
 {
-    public class NewHeroMenu
+    public class NewHeroMenu : Menu
     {
-        enum Buttons
+        public enum Buttons
         {
             SetName,
             Play,
             Exit
         }
 
+        public string[] getMenuItems = new string[3];
+        public string[] GetElelmets = new string[4];
         public void Content()
         {
+            Buttons();
+            Content();
 
             void Buttons()
             {
-                string[] unselcetdMenuItems = new string[0];
-                string[] selectedMenuItems = new string[0];
+                string[] unselcetdMenuItems = new string[3];
+                string[] selectedMenuItems = new string[3];
 
                 selectedMenuItems[0] = ("Name :");
                 selectedMenuItems[1] = ("Play");
@@ -30,10 +34,10 @@ namespace LabbFightarena.Menu
             void Content()
             {
                 string[] playerDetails = new string[4];
-                playerDetails[0] = ("Damage");
-                playerDetails[1] = ("Strength");
-                playerDetails[2] = ("Dexterity");
-                playerDetails[3] = ("Intelligence");
+                playerDetails[0] = ("Damage:       ");
+                playerDetails[1] = ("Strength:     ");
+                playerDetails[2] = ("Dexterity:    ");
+                playerDetails[3] = ("Intelligence: ");
 
             }
         }
