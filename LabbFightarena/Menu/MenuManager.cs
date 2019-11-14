@@ -51,7 +51,7 @@ namespace LabbFightarena.Menu
             }
             else if(ActiveApplicationMenu == (int)ApplicationMenus.NewHeroMenu)
             {
-                newHeroMenu.Content
+                //newHeroMenu.Content
             }
             PrintMenuContent();
             MenuNaviagtion();
