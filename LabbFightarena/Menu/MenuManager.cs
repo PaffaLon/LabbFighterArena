@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace LabbFightarena.Menu
 {
-    class MenuManager
+    public class MenuManager
     {
         readonly MainMenu mainMenu = new MainMenu();
         readonly HeroMenu heroMenu = new HeroMenu();
@@ -22,7 +22,7 @@ namespace LabbFightarena.Menu
 
 
         //Ensuers the defalut value is set to the intended value.
-        public void DefaultValues()
+        public MenuManager()
         {
             ActiveApplicationMenu = (int)ApplicationMenus.MainMenu;
             mainMenu.Button = (int)MainMenu.Buttons.Play;
