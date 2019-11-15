@@ -25,9 +25,13 @@ namespace LabbFightarena.Menu
                 string[] unselcetdMenuItems = new string[3];
                 string[] selectedMenuItems = new string[3];
 
-                selectedMenuItems[0] = ("Name :");
-                selectedMenuItems[1] = ("Play");
-                selectedMenuItems[2] = ("Exit");
+                unselcetdMenuItems[0] = ("Name :");
+                unselcetdMenuItems[1] = ("Play");
+                unselcetdMenuItems[2] = ("Exit");
+
+                selectedMenuItems[0] = (">> Name :");
+                selectedMenuItems[1] = (">> Play <<");
+                selectedMenuItems[2] = (">> Exit <<");
 
             }
 
