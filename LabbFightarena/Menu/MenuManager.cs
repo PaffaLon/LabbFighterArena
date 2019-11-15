@@ -144,8 +144,8 @@ namespace LabbFightarena.Menu
                 }
                 else if (cki.Key.GetHashCode() == 13 && heroMenu.Button == (int)HeroMenu.Buttons.NewHero)
                 {
-                    ActiveApplicationMenu = (int)ApplicationMenus.NewHeroMenu;
-                    newHeroMenu.Button = (int)NewHeroMenu.Buttons.SetName;
+                    //ActiveApplicationMenu = (int)ApplicationMenus.NewHeroMenu;
+                    //newHeroMenu.Button = (int)NewHeroMenu.Buttons.SetName;
                     Console.Clear();
                     Console.WriteLine("You can soon generate a new hero.");
                     Thread.Sleep(1000);
