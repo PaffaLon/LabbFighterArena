@@ -9,7 +9,7 @@ namespace LabbFightarena.Menu
     {
         readonly MainMenu mainMenu = new MainMenu();
         readonly HeroMenu heroMenu = new HeroMenu();
-        readonly NewHeroMenu newHeroMenu = new NewHeroMenu();
+        readonly CreateNewHero newHeroMenu = new CreateNewHero();
 
         public enum ApplicationMenus
         {

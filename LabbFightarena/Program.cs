@@ -9,7 +9,9 @@ namespace LabbFightarena
         static void Main()
         {
             MenuManager menuManager = new MenuManager();
-            menuManager.LoadMenu();
+            DiceRoll diceRoll = new DiceRoll();
+            diceRoll.RollTheDice();
+            //menuManager.LoadMenu();
         }
     }
 }
