@@ -14,7 +14,8 @@ namespace LabbFightarena.Characters
 
         public CharacterManager()
         {
-
+            Players = new List<Player>();
+            Monsters = new List<Monster>();
         }
 
 #region Player
