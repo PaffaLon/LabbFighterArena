@@ -7,6 +7,8 @@ namespace LabbFightarena.Characters
     //Managers the creation & usage of characters.
     public class CharacterManager
     {
+        
+        
         private void CreateNewCharacter()
         {
 
