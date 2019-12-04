@@ -183,7 +183,7 @@ namespace LabbFightarena.Menu
                         Console.WriteLine(item + Environment.NewLine);
                     }
                     break;
-                default:
+                default://MainMenu
                     foreach (var item in mainMenu.Elements)
                     {
                         Console.SetCursorPosition((Console.WindowWidth - item.Length) / 2, Console.WindowHeight / 2 - 6 + col++);
